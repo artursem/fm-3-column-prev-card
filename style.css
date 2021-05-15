@@ -33,11 +33,7 @@ body {
 
 main {
     display: flex;
-
-    /* ##################################### */
-    flex-direction: row;
-    max-width: 800px;
-    height: 400px;
+    margin: 1rem;
 }
 
 section {
@@ -65,7 +61,7 @@ h2
     {
         font-family: 'Big Shoulders Display', cursive;
         color: var(--gray);
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         text-transform: uppercase;
 }
 
@@ -106,6 +102,31 @@ button:hover, #btn-1:hover, #btn-2:hover, #btn-3:hover   {
     background-color:rgba(0,0,0,0);
 }
 
+@media (min-width: 900px) {
+    main {
+        flex-direction: row;
+        max-width: 800px;
+        height: 400px;
+    }
+    section:nth-child(1) {
+        border-radius: 10px 0 0 10px;
+    }
+    section:nth-child(3) {
+        border-radius: 0 10px 10px 0;
+    }
+}
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        max-width: 300px;
+    }
+    section:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+    }
+    section:nth-child(3) {
+        border-radius: 0 0 10px 10px;
+    }
+}
 
 /* font-family: 'Lexend Deca', sans-serif; */
 /* font-family: 'Big Shoulders Display', cursive; */
